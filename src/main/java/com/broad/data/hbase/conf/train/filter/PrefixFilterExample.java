@@ -1,6 +1,6 @@
 package com.broad.data.hbase.conf.train.filter;
 
-import com.qiaofang.hawkeye.hbase.conf.train.basic.HBaseHelper;
+import com.broad.data.hbase.conf.train.basic.HBaseHelper;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.Cell;
 import org.apache.hadoop.hbase.HBaseConfiguration;
@@ -19,14 +19,14 @@ public class PrefixFilterExample {
         HBaseHelper helper = HBaseHelper.getHelper(configuration);
 
 
-        helper.dropTable("testtable");
-        helper.createTable(TableName.valueOf("testtable"), "colfam1", "colfam2");
+        helper.dropTable("prefix-table");
+        helper.createTable(TableName.valueOf("prefix-table"), "colfam1", "colfam2");
 
         System.out.println("Adding init table values");
-        helper.fillTable("testtable", 1, 100, 10, "colfam1", "colfam2");
+        helper.fillTable("prefix-table", 1, 100, 10, "colfam1", "colfam2");
 
         Connection connection = ConnectionFactory.createConnection(configuration);
-        Table table = connection.getTable(TableName.valueOf("testtable"));
+        Table table = connection.getTable(TableName.valueOf("prefix-table"));
 
         Filter prefixFilter = new PrefixFilter(Bytes.toBytes("row-1"));
 
