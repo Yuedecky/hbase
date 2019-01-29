@@ -1,4 +1,4 @@
-package com.broad.data.hbase.conf.train.phoeix;
+package com.broad.data.hbase.conf.train.phoenix;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
