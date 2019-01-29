@@ -328,10 +328,18 @@
                 </exclusions>
             </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.apache.hbase/hbase-rest -->
+        <dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-rest</artifactId>
+            <version>2.1.0</version>
+        </dependency>
 
-            <dependency>
+
+
+        <dependency>
                 <groupId>org.apache.hadoop</groupId>
-                <artifactId>hadoop-common</artifactId>
+                <artifactId>hadoop-yarn-common</artifactId>
                 <version>${hadoop.version}</version>
                 <exclusions>
                     <exclusion>
@@ -566,10 +574,6 @@
                     <exclusion>
                         <artifactId>commons-lang</artifactId>
                         <groupId>commons-lang</groupId>
-                    </exclusion>
-                    <exclusion>
-                        <artifactId>commons-collections</artifactId>
-                        <groupId>commons-collections</groupId>
                     </exclusion>
                     <exclusion>
                         <artifactId>protobuf-java</artifactId>
