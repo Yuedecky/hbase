@@ -30,6 +30,7 @@ public class RowFilterExample {
         helper.fillTable("testtable", 1, 100, 100, true, "colfam1", "colfam2");
 
         Connection connection = ConnectionFactory.createConnection(configuration);
+        //rowFilter是一个比较过滤器
         Filter filter1 = new RowFilter(CompareOperator.LESS_OR_EQUAL, new BinaryComparator(Bytes.toBytes("row-22")));
 
         Scan scan = new Scan();
