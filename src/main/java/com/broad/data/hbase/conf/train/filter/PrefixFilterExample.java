@@ -1,6 +1,6 @@
 package com.broad.data.hbase.conf.train.filter;
 
-import com.qiaofang.hawkeye.hbase.conf.train.basic.HBaseHelper;
+import com.broad.data.hbase.conf.train.basic.HBaseHelper;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.Cell;
 import org.apache.hadoop.hbase.HBaseConfiguration;
